@@ -1,48 +1,393 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aerodine International</title>
+export default function AerodineInternationalWebsite() {
+  return (
+    <div className="min-h-screen bg-white text-slate-800">
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-wide text-blue-900">
+              AERODINE
+            </h1>
+            <p className="text-sm text-yellow-600 font-medium tracking-widest">
+              INTERNATIONAL
+            </p>
+          </div>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+          <nav className="hidden md:flex gap-8 font-medium">
+            <a href="#" className="hover:text-yellow-600">Home</a>
+            <a href="#about" className="hover:text-yellow-600">About</a>
+            <a href="#courses" className="hover:text-yellow-600">Courses</a>
+            <a href="#placements" className="hover:text-yellow-600">Placements</a>
+            <a href="#contact" className="hover:text-yellow-600">Contact</a>
+          </nav>
 
-<body>
+          <button className="bg-blue-900 text-white px-5 py-2 rounded-xl hover:bg-blue-800 transition-all">
+            Apply Now
+          </button>
+        </div>
+      </header>
 
-<header>
-  <h1>AERODINE INTERNATIONAL</h1>
-  <p>Professional Training & Career Development</p>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="uppercase tracking-[5px] text-yellow-400 mb-4 font-semibold">
+              Professional Training • Career Development • Skill Education
+            </p>
 
-  <button>Apply Now</button>
-</header>
+            <h2 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+              Shape Your <span className="text-yellow-400">Future</span>
+            </h2>
 
-<section class="hero">
-  <h2>Build Your Professional Future</h2>
+            <p className="text-lg text-slate-200 leading-relaxed mb-8">
+              Aerodine International provides industry-focused professional
+              training for freshers who dream of building successful careers in
+              multiple industries, corporate environments and modern workplaces.
+            </p>
 
-  <p>
-    Industry-focused training programs designed for students,
-    freshers and professionals.
-  </p>
-</section>
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-950 font-bold px-7 py-3 rounded-2xl shadow-lg transition-all">
+                Explore Courses
+              </button>
 
-<section class="courses">
+              <button className="border border-white hover:bg-white hover:text-blue-900 px-7 py-3 rounded-2xl transition-all">
+                Student Login
+              </button>
+            </div>
+          </div>
 
-  <div class="card">
-    <h3>Digital Marketing</h3>
-  </div>
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+              alt="Professional Training"
+              className="rounded-3xl shadow-2xl object-cover h-[520px] w-full"
+            />
 
-  <div class="card">
-    <h3>Business Communication</h3>
-  </div>
+            <div className="absolute -bottom-8 -left-6 bg-white text-blue-950 p-6 rounded-2xl shadow-xl max-w-xs">
+              <h3 className="font-bold text-2xl mb-2">100% Career Support</h3>
+              <p className="text-sm text-slate-600">
+                Practical training with placement guidance and interview preparation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="card">
-    <h3>Corporate Skill Development</h3>
-  </div>
+      {/* Features */}
+      <section className="bg-slate-100 py-16">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-6">
+          {[
+            {
+              title: "Expert Faculty",
+              desc: "Learn from experienced trainers and industry professionals.",
+            },
+            {
+              title: "Industry Training",
+              desc: "Practical sessions designed for real-world jobs.",
+            },
+            {
+              title: "Placement Support",
+              desc: "Interview guidance and career opportunities.",
+            },
+            {
+              title: "Modern Learning",
+              desc: "Smart classrooms and interactive learning systems.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-2xl mb-5">
+                ✈️
+              </div>
 
-</section>
+              <h3 className="text-2xl font-bold mb-3 text-blue-950">
+                {item.title}
+              </h3>
 
-<script src="script.js"></script>
+              <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-</body>
-</html>
+      {/* About */}
+      <section id="about" className="py-24">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200&auto=format&fit=crop"
+              alt="Training"
+              className="rounded-3xl shadow-2xl"
+            />
+          </div>
+
+          <div>
+            <p className="uppercase tracking-[4px] text-yellow-600 font-semibold mb-4">
+              About Aerodine International
+            </p>
+
+            <h2 className="text-5xl font-black text-blue-950 mb-6 leading-tight">
+              Building Careers Through Professional Training
+            </h2>
+
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              Aerodine International is dedicated to helping students and freshers
+              gain the confidence, communication skills and industry exposure
+              required to succeed in professional and corporate sectors.
+            </p>
+
+            <div className="grid grid-cols-2 gap-6 mt-10">
+              <div className="bg-blue-50 p-6 rounded-2xl">
+                <h3 className="text-4xl font-black text-blue-950">5000+</h3>
+                <p className="text-slate-600 mt-2">Students Trained</p>
+              </div>
+
+              <div className="bg-yellow-50 p-6 rounded-2xl">
+                <h3 className="text-4xl font-black text-yellow-700">95%</h3>
+                <p className="text-slate-600 mt-2">Placement Assistance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section id="courses" className="bg-blue-950 text-white py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="uppercase tracking-[4px] text-yellow-400 font-semibold mb-4">
+              Popular Programs
+            </p>
+
+            <h2 className="text-5xl font-black mb-6">
+              Industry-Focused Courses
+            </h2>
+
+            <p className="text-slate-300 text-lg">
+              Practical, job-ready programs designed for modern professional industries and career opportunities.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Digital Marketing",
+              "Business Communication",
+              "Hospitality Management",
+              "Corporate Skill Development",
+              "Personality Development",
+              "Customer Service Excellence",
+            ].map((course, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:scale-105 transition-all"
+              >
+                <div className="text-5xl mb-5">🎓</div>
+                <h3 className="text-2xl font-bold mb-4">{course}</h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Learn practical skills, communication and industry standards with experienced trainers.
+                </p>
+
+                <button className="bg-yellow-500 text-blue-950 px-5 py-3 rounded-xl font-bold hover:bg-yellow-400 transition-all">
+                  Apply Course
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Placement */}
+      <section id="placements" className="py-24 bg-slate-100">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="uppercase tracking-[4px] text-yellow-600 font-semibold mb-4">
+            Placement & Success
+          </p>
+
+          <h2 className="text-5xl font-black text-blue-950 mb-8">
+            Start Your Professional Journey
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {[
+              "Interview Preparation",
+              "Resume Building",
+              "Corporate Grooming",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-10 rounded-3xl shadow-md"
+              >
+                <div className="text-6xl mb-6">💼</div>
+                <h3 className="text-3xl font-bold text-blue-950 mb-4">
+                  {item}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Career-focused guidance to help students confidently enter the industry.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-yellow-500 to-yellow-400 py-20 text-center text-blue-950">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-5xl font-black mb-6">
+            Admissions Open For 2026
+          </h2>
+
+          <p className="text-xl leading-relaxed mb-8">
+            Join Aerodine International and begin your journey toward a successful global career.
+          </p>
+
+          <button className="bg-blue-950 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-900 transition-all shadow-xl">
+            Apply Now
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+            {/* Testimonials */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[4px] text-yellow-600 font-semibold mb-4">
+              Student Success
+            </p>
+            <h2 className="text-5xl font-black text-blue-950">
+              What Students Say
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Aerodine International helped me improve my communication and confidence professionally.",
+              "The training environment was modern, practical and highly motivating.",
+              "I gained industry-ready skills and valuable career guidance from expert trainers.",
+            ].map((review, index) => (
+              <div key={index} className="bg-slate-100 p-8 rounded-3xl shadow-sm">
+                <div className="text-5xl mb-5">⭐</div>
+                <p className="text-slate-700 leading-relaxed text-lg mb-6">
+                  {review}
+                </p>
+                <h3 className="font-bold text-blue-950 text-xl">
+                  Student Review
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-blue-950 text-white py-24">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="uppercase tracking-[4px] text-yellow-400 font-semibold mb-4">
+              Contact Us
+            </p>
+
+            <h2 className="text-5xl font-black mb-6 leading-tight">
+              Start Your Journey With Aerodine International
+            </h2>
+
+            <p className="text-slate-300 text-lg leading-relaxed mb-8">
+              Connect with our team for admissions, counseling and career guidance.
+            </p>
+
+            <div className="space-y-5 text-lg">
+              <p>📞 +91 XXXXX XXXXX</p>
+              <p>✉️ info@aerodineinternational.com</p>
+              <p>📍 India</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-10 rounded-3xl shadow-2xl text-slate-800">
+            <h3 className="text-3xl font-black text-blue-950 mb-8">
+              Admission Inquiry Form
+            </h3>
+
+            <div className="space-y-5">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full border border-slate-300 rounded-2xl px-5 py-4"
+              />
+
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full border border-slate-300 rounded-2xl px-5 py-4"
+              />
+
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full border border-slate-300 rounded-2xl px-5 py-4"
+              />
+
+              <textarea
+                placeholder="Tell us about your career goals"
+                rows="4"
+                className="w-full border border-slate-300 rounded-2xl px-5 py-4"
+              ></textarea>
+
+              <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-blue-950 font-bold py-4 rounded-2xl transition-all">
+                Submit Inquiry
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" className="bg-slate-950 text-slate-300 py-16">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+          <div>
+            <h2 className="text-3xl font-black text-white mb-4">
+              AERODINE
+            </h2>
+            <p className="leading-relaxed text-slate-400">
+              Professional training institute helping students and professionals build successful careers across multiple sectors.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-white mb-5">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>Home</li>
+              <li>Courses</li>
+              <li>Admissions</li>
+              <li>Placements</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-white mb-5">Courses</h3>
+            <ul className="space-y-3">
+              <li>Professional Training</li>
+              <li>Corporate Skills</li>
+              <li>Hospitality</li>
+              <li>Tourism</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-white mb-5">Contact</h3>
+            <ul className="space-y-3 text-slate-400">
+              <li>📍 India</li>
+              <li>📞 +91 XXXXX XXXXX</li>
+              <li>✉️ info@aerodineinternational.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 mt-14 pt-8 text-center text-slate-500">
+          © 2026 Aerodine International. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  );
+}
